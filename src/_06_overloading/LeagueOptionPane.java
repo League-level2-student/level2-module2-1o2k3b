@@ -41,7 +41,42 @@ public class LeagueOptionPane {
 	}
 	
 	// 3. Call this method in the Runner class
-	
+	public static void showMessageDialog(String message, String Title) {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JLabel image = new JLabel();
+		JLabel label = new JLabel();
+		
+		frame.setSize(200, 100);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		panel.add(image);
+		panel.add(label);
+		image.setIcon(loadImage(Title));
+		label.setText(message);
+		
+		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
+		frame.setLocationRelativeTo(null);
+	}
+	public static void showMessageDialog(String message, String Image, String number) {
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
+		JLabel image = new JLabel();
+		JLabel label = new JLabel();
+		
+		frame.setSize(200, 100);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		panel.add(image);
+		panel.add(label);
+		image.setIcon(loadImage(Image));
+		label.setText(message);
+		
+		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
+		frame.setLocationRelativeTo(null);
+	}
 
 	// 4. Create another showMessageDialog() method that lets us also choose the Message and Title 
 	//    2 String parameters (one for the message and one for the title)
